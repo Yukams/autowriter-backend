@@ -19,4 +19,13 @@ public class Production {
     public Production(@NonNull String text) {
         this.text = text;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    @NonNull
+    public String getText() {
+        return text;
+    }
 }

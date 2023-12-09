@@ -4,6 +4,7 @@ import com.yukams.autowriterbackend.production.Production;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -25,11 +26,15 @@ public class PrepromptService {
         return this.prepromptRepository;
     }
 
-    public Preprompt findById(long id) {
+    public Preprompt findById(Long id) {
         return this.prepromptRepository.findById(id).orElse(null);
     }
 
     public List<Preprompt> findAll() {
         return prepromptRepository.findAll();
+    }
+
+    public void save(Preprompt preprompt) {
+        prepromptRepository.save(preprompt);
     }
 }

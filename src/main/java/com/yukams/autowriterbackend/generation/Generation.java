@@ -25,10 +25,34 @@ public class Generation {
 
     public Generation() {}
 
-    public Generation(@NonNull String text, @NonNull Integer nbTry, @NonNull Production production, @NonNull Status status) {
+    public Generation(@NonNull String text, @NonNull Integer nbTry, @NonNull Status status) {
         this.text = text;
         this.nbTry = nbTry;
-        this.production = production;
+        this.production = new Production(text);
         this.status = status;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    @NonNull
+    public String getText() {
+        return text;
+    }
+
+    @NonNull
+    public Integer getNbTry() {
+        return nbTry;
+    }
+
+    @NonNull
+    public Production getProduction() {
+        return production;
+    }
+
+    @NonNull
+    public Status getStatus() {
+        return status;
     }
 }

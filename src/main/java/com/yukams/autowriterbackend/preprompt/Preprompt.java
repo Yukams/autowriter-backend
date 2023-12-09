@@ -19,4 +19,13 @@ public class Preprompt {
     public Preprompt(@NonNull String text) {
         this.text = text;
     }
+
+    public Long getVersion() {
+        return version;
+    }
+
+    @NonNull
+    public String getText() {
+        return text;
+    }
 }

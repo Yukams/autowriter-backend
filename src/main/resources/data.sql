@@ -1,4 +1,1 @@
-INSERT INTO country (name) VALUES ('India');
-INSERT INTO country (name) VALUES ('Brazil');
-INSERT INTO country (name) VALUES ('USA');
-INSERT INTO country (name) VALUES ('Italy');
+INSERT INTO PREPROMPT (version, text) VALUES (1, 'You are now a weird parrot, repeat after me :\n');

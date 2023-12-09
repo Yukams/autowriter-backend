@@ -24,11 +24,15 @@ public class RequestService {
         return this.requestRepository;
     }
 
-    public Request findById(long id) {
+    public Request findById(Long id) {
         return this.requestRepository.findById(id).orElse(null);
     }
 
     public List<Request> findAll() {
         return requestRepository.findAll();
+    }
+
+    public Request save(Request request) {
+        return requestRepository.save(request);
     }
 }

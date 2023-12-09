@@ -24,11 +24,15 @@ public class GenerationService {
         return this.generationRepository;
     }
 
-    public Generation findById(long id) {
+    public Generation findById(Long id) {
         return this.generationRepository.findById(id).orElse(null);
     }
 
     public List<Generation> findAll() {
         return generationRepository.findAll();
+    }
+
+    public void save(Generation generation) {
+        generationRepository.save(generation);
     }
 }
