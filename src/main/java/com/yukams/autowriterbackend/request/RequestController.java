@@ -12,17 +12,17 @@ public class RequestController {
     private RequestService requestService;
 
     @GetMapping("/{id}")
-    public Request getRequestById(@PathVariable Long id) {
-        return requestService.findRequestById(id);
+    public Request getById(@PathVariable Long id) {
+        return requestService.findById(id);
     }
 
     @GetMapping("/list")
-    public List<Request> getAllRequest() {
-        return requestService.findAllRequests();
+    public List<Request> getAll() {
+        return requestService.findAll();
     }
 
     @PostMapping(path="/new", consumes = "application/json")
-    public String postRequest(@RequestParam String text, @RequestParam Long prepromptVersion) {
+    public String post(@RequestParam String text, @RequestParam Long prepromptVersion) {
         return "Pong !";
     }
 }
